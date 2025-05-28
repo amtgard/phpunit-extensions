@@ -1,0 +1,23 @@
+{
+  "name"  : "amtgard/phpunit-extensions",
+  "type"  : "library",
+  "homepage": "https://github.com/amtgard/phpunit-extensions",
+  "license" : "MIT",
+  "description": "PHPUnit Extensions",
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Amtgard\\PHPUnit\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.2"
+  }
+}
