@@ -12,9 +12,9 @@ class AmtgardTestCase extends TestCase
             self::assertThat(false, self::isTrue(), "Callable did not throw.");
         } catch (\Throwable $e) {
             $caughtClass = $e::class;
-            self::assertThat($throwableClass == $e,
+            self::assertThat($throwableClass == $caughtClass,
                 self::isTrue(),
-                "Expectable throwable of class of $throwableClass but instead caught $e");
+                "Expectable throwable of class of $throwableClass but instead caught $caughtClass");
         }
     }
 
@@ -26,7 +26,7 @@ class AmtgardTestCase extends TestCase
             $caughtClass = get_class($e);
             self::assertThat(false,
                 self::isTrue(),
-                "Expected callable to not throw but instead threw $e");
+                "Expected callable to not throw but instead threw $caughtClass");
         }
     }
 }
